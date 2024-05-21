@@ -1,9 +1,60 @@
+<!DOCTYPE html>
 <html>
     <head>
-       <link rel="stylesheet" href="index.css">
+        <title>Jimmy's Diner</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
     </head>
     <body>
-	<script src="index.js"></script>
+        <header>
+            <div class="banner-container">
+                <img class="banner-img" src="banner.png" alt="a banner image of a burger">
+                <h1 class="banner-txt-header">Jimmy's Diner</h1>
+                <h3 class="banner-txt-info">The best burgers and pizzas in town</h3>
+            </div>
+        </header>
+        <main>
+            <section class="items-section" id="items-section">
+            </section>
+            <section class="price-total-section" id="price-total-section">
+                <div class="customers-order-container hidden" id="customers-order-container">
+                    <h2 class="order-title">Your Order</h2>
+                    <div class="order-container" id="order-container">
+                    </div>
+                    <div class="total-price-container">
+                        <h2>Total price:</h2>
+                        <h3 id="total-price"></h3>
+                    </div>
+                    <button class="complete-order-btn" id="complete-order-btn">Complete Order</button>
+                </div>
+                <div class="order-done" id="order-done">
+                </div>
+            </section>
+        </main>
+        <div class="pay-modal" id="pay-modal">
+            <form id="pay-form">
+                <label>Enter Card Details</label>
+                <ul>
+                    <li>
+                        <input type="text" id="name" placeholder="     Enter your name" required>
+                    </li>
+                    <li>
+                        <input type="text" id="card-number" placeholder="     Enter card number" required minlength="15" maxlength="16" pattern="[0-9]+" title="Please Enter Numbers Only">
+                    </li>
+                    <li>
+                        <input type="text" id="cvv" placeholder="     Enter CVV" required maxlength="3" minlength="3" pattern="[0-9]+" title="Please Enter Numbers Only">
+                    </li>
+                    <li class="button">
+                        <button type="submit" id="pay-btn">Pay</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+	<script src="index.js" type="module"></script>
     </body>
 </html>
 
